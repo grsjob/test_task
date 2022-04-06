@@ -1,0 +1,3 @@
+export const TOGGLE_ACTIVE = 'CHIPS/TOGGLE_ACTIVE'
+export const POST_CHIP = 'CHIPS/POST_CHIP'
+export const DELETE_CHIP = 'CHIPS/DELETE_CHIP'
