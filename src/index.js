@@ -6,8 +6,7 @@ import {createStore} from "redux";
 import {Provider} from "react-redux";
 import {rootReducer} from "./redux/reducers/rootReducer";
 
-const rootElement = document.getElementById('root');
-const root = createRoot(rootElement);
+const root = createRoot(document.getElementById('root'));
 
 const store = createStore(
     rootReducer,

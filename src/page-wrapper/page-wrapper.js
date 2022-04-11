@@ -4,6 +4,7 @@ import Button from "../common-blocks/__button/__button"
 import {StyledContainer, StyledPageWrapper} from "./styles";
 import Slider from "../common-blocks/__slider/__slider";
 import Chips from "../common-blocks/__chips/__chips";
+import TextInput from "../common-blocks/__text-input/TextInput";
 
 const PageWrapper = props => {
 
@@ -12,6 +13,7 @@ const PageWrapper = props => {
             <StyledContainer>
                 <Slider />
                 <Chips />
+                <TextInput />
                 <Button color={'#FFFFFF'} size={"small"}>На карте</Button>
                 <Button color={'#0468FF'} size={"big"}>Все пляжи страны</Button>
             </StyledContainer>

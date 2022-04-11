@@ -1,8 +1,7 @@
-import React, {useCallback, useEffect, useMemo} from 'react';
-import {chips} from "../../mocs/chips";
+import React from 'react';
 import {StyledChipsButton} from "./styles";
 import {useDispatch, useSelector} from "react-redux";
-import {postChip, deleteChip, toggleActive} from "../../redux/actions/chipsActions";
+import {toggleActive} from "../../redux/actions/chipsActions";
 
 
 const Chips = props => {
@@ -10,19 +9,23 @@ const Chips = props => {
     const chipsState = useSelector(state => state.chips.chips)
 
     return (
-        <>
+        <ul style={{listStyle: "none"}}>
             {
                 chipsState.map(chip =>
-                    <StyledChipsButton
-                        key={chip.id}
-                        isActive={chip.isActive}
-                        onClick={()=>{dispatch(toggleActive(chip.name))}
-                        }
-                    >
-                        {chip.value}
-                    </StyledChipsButton>)
+                    <li key={chip.id}>
+                        <StyledChipsButton
+                            isActive={chip.isActive}
+                            onClick={() => {
+                                dispatch(toggleActive(chip.name))
+                            }
+                            }
+                        >
+                            {chip.value}
+                        </StyledChipsButton>
+                    </li>
+                )
             }
-        </>
+        </ul>
 
     )
 };

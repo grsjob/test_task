@@ -5,7 +5,7 @@ const initialState = {
         {
             id: 1,
             name: 'beach',
-            isActive: false,
+            isActive: true,
             value: 'Пляжи',
             placeHolder: ' названию пляжа'
         },
